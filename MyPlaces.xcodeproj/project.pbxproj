@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A3444E8248FB781004F1788 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3444E7248FB781004F1788 /* CustomTableViewCell.swift */; };
+		8AB68B4F248FCEF80016CF4D /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB68B4E248FCEF80016CF4D /* PlaceModel.swift */; };
 		8AC41773248EBC0A00BC5940 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC41772248EBC0A00BC5940 /* AppDelegate.swift */; };
 		8AC41775248EBC0A00BC5940 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC41774248EBC0A00BC5940 /* SceneDelegate.swift */; };
 		8AC4177A248EBC0A00BC5940 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC41778248EBC0A00BC5940 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		8A3444E7248FB781004F1788 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		8AB68B4E248FCEF80016CF4D /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		8AC4176F248EBC0A00BC5940 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC41772248EBC0A00BC5940 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AC41774248EBC0A00BC5940 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				8AC41772248EBC0A00BC5940 /* AppDelegate.swift */,
 				8AC41774248EBC0A00BC5940 /* SceneDelegate.swift */,
+				8AB68B4E248FCEF80016CF4D /* PlaceModel.swift */,
 				8A3444E7248FB781004F1788 /* CustomTableViewCell.swift */,
 				8AC41788248EC0B100BC5940 /* MainTableViewController.swift */,
 				8AC41778248EBC0A00BC5940 /* Main.storyboard */,
@@ -147,6 +150,7 @@
 			files = (
 				8AC41773248EBC0A00BC5940 /* AppDelegate.swift in Sources */,
 				8AC41789248EC0B100BC5940 /* MainTableViewController.swift in Sources */,
+				8AB68B4F248FCEF80016CF4D /* PlaceModel.swift in Sources */,
 				8A3444E8248FB781004F1788 /* CustomTableViewCell.swift in Sources */,
 				8AC41775248EBC0A00BC5940 /* SceneDelegate.swift in Sources */,
 			);
