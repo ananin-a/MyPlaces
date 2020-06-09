@@ -11,9 +11,10 @@ import UIKit
 class MainTableViewController: UITableViewController {
     
     let restraintName = [
-        "Инари", "Васильки", "Ренессанс", "Ресторан Халиф Жуковский",
-        "Малышок", "Одна тонна", "SOVA", "Колесо",
-        "Ресторан", "ОРИОН", "Надежды", "Чентуриппе"
+        "Bonsai", "Burger Heroes", "Kitchen", "Love&Life",
+        "Morris Pub", "Sherlock Holmes", "Speak Easy", "X.O",
+        "Балкан Гриль", "Бочка", "Вкусные истории", "Дастархан",
+        "Индокитай", "Классик", "Шок"
     ]
 
     override func viewDidLoad() {
@@ -28,7 +29,10 @@ class MainTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
         cell.textLabel?.text = restraintName[indexPath.row]
+        cell.imageView?.image = UIImage(named: restraintName[indexPath.row])
+        
         return cell
     }
     
