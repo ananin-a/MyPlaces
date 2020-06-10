@@ -15,12 +15,12 @@ struct Place {
     let type: String
     let image: String
     
-        static let restraintName = [
-            "Bonsai", "Burger Heroes", "Kitchen", "Love&Life",
-            "Morris Pub", "Sherlock Holmes", "Speak Easy", "X.O",
-            "Балкан Гриль", "Бочка", "Вкусные истории", "Дастархан",
-            "Индокитай", "Классик", "Шок"
-        ]
+    static let restraintName = [
+        "Bonsai", "Burger Heroes", "Kitchen", "Love&Life",
+        "Morris Pub", "Sherlock Holmes", "Speak Easy", "X.O",
+        "Балкан Гриль", "Бочка", "Вкусные истории", "Дастархан",
+        "Индокитай", "Классик", "Шок"
+    ]
     
     static func getPlaces() -> [Place] {
         
@@ -29,7 +29,7 @@ struct Place {
         for place in restraintName {
             places.append(Place(name: place, location: "Moscow", type: "Restaurant", image: place))
         }
-         return places
+        return places
     }
     
 }
