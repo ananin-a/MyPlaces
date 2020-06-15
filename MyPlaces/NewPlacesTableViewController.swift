@@ -10,12 +10,24 @@ import UIKit
 
 class NewPlacesTableViewController: UITableViewController {
     
-    @IBOutlet weak var imageOfPlace: UIImageView!
+    var newPlace:Place?
+    var imageIsChange = false
+    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    @IBOutlet weak var placeImage: UIImageView!
+    @IBOutlet weak var placeName: UITextField!
+    @IBOutlet weak var placeLocation: UITextField!
+    @IBOutlet weak var placeType: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.tableFooterView = UIView() // Removing unnecessary markup
+        
+        saveButton.isEnabled = false
+        
+        placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
     }
     
     // MARK: - Table View Delegate
@@ -52,6 +64,29 @@ class NewPlacesTableViewController: UITableViewController {
         }
     }
     
+    func saveNewPlace() {
+        
+        var image: UIImage?
+        
+        if imageIsChange {
+            image = placeImage.image
+        } else {
+            image = #imageLiteral(resourceName: "imagePlaceholder")
+        }
+        
+        newPlace = Place(name: placeName.text!,
+                         location: placeLocation.text,
+                         type: placeType.text,
+                         image: image,
+                         restraintImage: nil)
+    }
+    
+    @IBAction func cancelAction(_ sender: Any) {
+        
+        dismiss(animated: true)
+    }
+    
+    
 }
 
 // MARK: - Text Field Delegate
@@ -61,6 +96,15 @@ extension NewPlacesTableViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    @objc private func textFieldChanged() {
+        
+        if placeName.text?.isEmpty == false {
+            saveButton.isEnabled = true
+        } else {
+            saveButton.isEnabled = false
+        }
     }
 }
 
@@ -80,9 +124,12 @@ extension NewPlacesTableViewController: UIImagePickerControllerDelegate, UINavig
     
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        imageOfPlace.image = info[.editedImage] as? UIImage
-        imageOfPlace.contentMode = .scaleAspectFit
-        imageOfPlace.clipsToBounds = true
+        placeImage.image = info[.editedImage] as? UIImage
+        placeImage.contentMode = .scaleAspectFit
+        placeImage.clipsToBounds = true
+        
+        imageIsChange = true
+        
         dismiss(animated: true)
     }
 }

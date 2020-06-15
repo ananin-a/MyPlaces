@@ -6,14 +6,15 @@
 //  Copyright © 2020 ByteApp. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Place {
     
     let name: String
-    let location: String
-    let type: String
-    let image: String
+    let location: String?
+    let type: String?
+    let image: UIImage?
+    let restraintImage: String?
     
     static let restraintName = [
         "Bonsai", "Burger Heroes", "Kitchen", "Love&Life",
@@ -27,7 +28,11 @@ struct Place {
         var places = [Place]()
         
         for place in restraintName {
-            places.append(Place(name: place, location: "Moscow", type: "Restaurant", image: place))
+            places.append(Place(name: place,
+                                location: "Moscow",
+                                type: "Restaurant",
+                                image: nil,
+                                restraintImage: place))
         }
         return places
     }
