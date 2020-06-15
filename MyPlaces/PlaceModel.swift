@@ -6,36 +6,20 @@
 //  Copyright © 2020 ByteApp. All rights reserved.
 //
 
-import UIKit
+import RealmSwift
 
-struct Place {
+class Place: Object {
     
-    let name: String
-    let location: String?
-    let type: String?
-    let image: UIImage?
-    let restraintImage: String?
+    @objc dynamic var name = ""
+    @objc dynamic var location: String?
+    @objc dynamic var type: String?
+    @objc dynamic var imageData: Data?
     
-    static let restraintName = [
-        "Bonsai", "Burger Heroes", "Kitchen", "Love&Life",
-        "Morris Pub", "Sherlock Holmes", "Speak Easy", "X.O",
-        "Балкан Гриль", "Бочка", "Вкусные истории", "Дастархан",
-        "Индокитай", "Классик", "Шок"
-    ]
-    
-    static func getPlaces() -> [Place] {
-        
-        var places = [Place]()
-        
-        for place in restraintName {
-            places.append(Place(name: place,
-                                location: "Moscow",
-                                type: "Restaurant",
-                                image: nil,
-                                restraintImage: place))
-        }
-        return places
+    convenience init(name: String, location: String?, type: String?, imageData: Data?) {
+        self.init()
+        self.name = name
+        self.location = location
+        self.type = type
+        self.imageData = imageData
     }
-    
 }
-

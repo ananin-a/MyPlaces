@@ -10,7 +10,6 @@ import UIKit
 
 class NewPlacesTableViewController: UITableViewController {
     
-    var newPlace:Place?
     var imageIsChange = false
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
@@ -22,11 +21,9 @@ class NewPlacesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+   
         tableView.tableFooterView = UIView() // Removing unnecessary markup
-        
         saveButton.isEnabled = false
-        
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
     }
     
@@ -51,7 +48,7 @@ class NewPlacesTableViewController: UITableViewController {
             }
             photoGallery.setValue(photoGalleryIcon, forKey: "image")
             photoGallery.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
-
+            
             let cancel = UIAlertAction(title: "Cancel", style: .cancel)
             
             actionSheet.addAction(camera)
@@ -74,11 +71,15 @@ class NewPlacesTableViewController: UITableViewController {
             image = #imageLiteral(resourceName: "imagePlaceholder")
         }
         
-        newPlace = Place(name: placeName.text!,
-                         location: placeLocation.text,
-                         type: placeType.text,
-                         image: image,
-                         restraintImage: nil)
+        let imageData = image?.pngData()
+        
+        let newPlace = Place(name: placeName.text!,
+                             location: placeLocation.text,
+                             type: placeType.text,
+                             imageData: imageData)
+        
+        StorageManager.saveObject(newPlace)
+        
     }
     
     @IBAction func cancelAction(_ sender: Any) {

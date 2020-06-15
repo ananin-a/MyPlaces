@@ -26,8 +26,8 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0h2-Ui-lBY">
                                             <rect key="frame" x="15" y="10" width="65" height="65"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="65" id="Zb5-mG-vmd"/>
-                                                <constraint firstAttribute="width" constant="65" id="nJ2-2Q-gwT"/>
+                                                <constraint firstAttribute="height" constant="65" id="Nly-EL-IOL"/>
+                                                <constraint firstAttribute="width" constant="65" id="OIy-S9-Hs7"/>
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="DaV-eU-olY">
@@ -55,13 +55,12 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="0h2-Ui-lBY" firstAttribute="top" secondItem="dhx-Iv-EoY" secondAttribute="top" constant="10" id="IjH-E2-mm0"/>
                                         <constraint firstItem="DaV-eU-olY" firstAttribute="leading" secondItem="0h2-Ui-lBY" secondAttribute="trailing" constant="16" id="Iu6-B5-VvC"/>
                                         <constraint firstItem="DaV-eU-olY" firstAttribute="top" secondItem="dhx-Iv-EoY" secondAttribute="top" constant="8" id="Kew-8k-J98"/>
                                         <constraint firstAttribute="bottom" secondItem="DaV-eU-olY" secondAttribute="bottom" constant="8" id="Vkc-to-Pyp"/>
-                                        <constraint firstAttribute="bottom" secondItem="0h2-Ui-lBY" secondAttribute="bottom" constant="10" id="ad8-VE-c2P"/>
-                                        <constraint firstItem="0h2-Ui-lBY" firstAttribute="centerY" secondItem="dhx-Iv-EoY" secondAttribute="centerY" id="bzf-XZ-I3C"/>
+                                        <constraint firstItem="0h2-Ui-lBY" firstAttribute="top" secondItem="dhx-Iv-EoY" secondAttribute="top" constant="10" id="ed2-Ip-221"/>
                                         <constraint firstItem="0h2-Ui-lBY" firstAttribute="leading" secondItem="dhx-Iv-EoY" secondAttribute="leading" constant="15" id="qC1-0F-Etn"/>
+                                        <constraint firstAttribute="bottom" secondItem="0h2-Ui-lBY" secondAttribute="bottom" constant="10" id="rhx-Mx-WpT"/>
                                         <constraint firstAttribute="trailing" secondItem="DaV-eU-olY" secondAttribute="trailing" constant="16" id="xFy-Il-w60"/>
                                     </constraints>
                                 </tableViewCellContentView>
