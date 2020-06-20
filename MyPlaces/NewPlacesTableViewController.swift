@@ -40,7 +40,7 @@ class NewPlacesViewController: UITableViewController {
         }
     }
     
-    // MARK: Table view delegate
+    // MARK: - Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.row == 0 {
@@ -141,7 +141,7 @@ class NewPlacesViewController: UITableViewController {
     
 }
 
-// MARK: Text field delegate
+// MARK: - Text field delegate
 extension NewPlacesViewController: UITextFieldDelegate {
     
     // Скрываем клавиатуру по нажатию на Done
@@ -161,7 +161,7 @@ extension NewPlacesViewController: UITextFieldDelegate {
     }
 }
 
-//MARK: Work with image
+//MARK: - Work with image
 extension NewPlacesViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func chooseImagePicker(source: UIImagePickerController.SourceType) {
