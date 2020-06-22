@@ -17,7 +17,7 @@
 		8AC4177C248EBC0C00BC5940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4177B248EBC0C00BC5940 /* Assets.xcassets */; };
 		8AC4177F248EBC0C00BC5940 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4177D248EBC0C00BC5940 /* LaunchScreen.storyboard */; };
 		8AC41789248EC0B100BC5940 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC41788248EC0B100BC5940 /* MainViewController.swift */; };
-		8AC58365249175C4007EBD9B /* NewPlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC58364249175C4007EBD9B /* NewPlacesTableViewController.swift */; };
+		8AC58365249175C4007EBD9B /* NewPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC58364249175C4007EBD9B /* NewPlacesViewController.swift */; };
 		8AC80E37249DED11004BA9A0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC80E36249DED11004BA9A0 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +33,7 @@
 		8AC4177E248EBC0C00BC5940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AC41780248EBC0C00BC5940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AC41788248EC0B100BC5940 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		8AC58364249175C4007EBD9B /* NewPlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlacesTableViewController.swift; sourceTree = "<group>"; };
+		8AC58364249175C4007EBD9B /* NewPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlacesViewController.swift; sourceTree = "<group>"; };
 		8AC80E36249DED11004BA9A0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8D4F50150E4EEC68ECBE7C47 /* Pods_MyPlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F7A706AF9730DD0437774D7 /* Pods-MyPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.debug.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 				8AC41772248EBC0A00BC5940 /* AppDelegate.swift */,
 				8AC41774248EBC0A00BC5940 /* SceneDelegate.swift */,
 				8AC41788248EC0B100BC5940 /* MainViewController.swift */,
-				8AC58364249175C4007EBD9B /* NewPlacesTableViewController.swift */,
+				8AC58364249175C4007EBD9B /* NewPlacesViewController.swift */,
 				8AC80E36249DED11004BA9A0 /* MapViewController.swift */,
 				8AB68B4E248FCEF80016CF4D /* PlaceModel.swift */,
 				8A527312249806E60092F09F /* StorageManager.swift */,
@@ -223,7 +223,7 @@
 			files = (
 				8AC41773248EBC0A00BC5940 /* AppDelegate.swift in Sources */,
 				8AC41789248EC0B100BC5940 /* MainViewController.swift in Sources */,
-				8AC58365249175C4007EBD9B /* NewPlacesTableViewController.swift in Sources */,
+				8AC58365249175C4007EBD9B /* NewPlacesViewController.swift in Sources */,
 				8A527313249806E60092F09F /* StorageManager.swift in Sources */,
 				8AB68B4F248FCEF80016CF4D /* PlaceModel.swift in Sources */,
 				8A3444E8248FB781004F1788 /* CustomTableViewCell.swift in Sources */,
@@ -384,7 +384,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ByteApp.MyPlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -404,7 +404,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ByteApp.MyPlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
