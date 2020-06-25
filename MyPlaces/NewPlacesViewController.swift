@@ -22,8 +22,7 @@ class NewPlacesViewController: UITableViewController {
     @IBOutlet var placeLocation: UITextField!
     @IBOutlet var placeType: UITextField!
     @IBOutlet weak var cosmosView: CosmosView!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -74,12 +73,13 @@ class NewPlacesViewController: UITableViewController {
             actionSheet.addAction(cancel)
             
             present(actionSheet, animated: true)
+            
         } else {
             view.endEditing(true)
         }
     }
     
-    // MARK: - Navigation
+    //MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -94,7 +94,7 @@ class NewPlacesViewController: UITableViewController {
     
     func savePlace() {
         
-        let image = imageIsChanged ? placeImage.image : #imageLiteral(resourceName: "imagePlaceholder")        
+        let image = imageIsChanged ? placeImage.image : #imageLiteral(resourceName: "imagePlaceholder")
         let imageData = image?.pngData()
         
         let newPlace = Place(name: placeName.text!,
@@ -141,18 +141,18 @@ class NewPlacesViewController: UITableViewController {
         title = currentPlace?.name
         saveButton.isEnabled = true
     }
-
+    
     @IBAction func cancelAction(_ sender: Any) {
         dismiss(animated: true)
     }
     
 }
 
-// MARK: - Text field delegate
+    // MARK: - Text field delegate
 
 extension NewPlacesViewController: UITextFieldDelegate {
     
-    // Скрываем клавиатуру по нажатию на Done
+    // Hide keyboard by press "Done"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -168,7 +168,7 @@ extension NewPlacesViewController: UITextFieldDelegate {
     }
 }
 
-//MARK: - Work with image
+    //MARK: - Work with image
 
 extension NewPlacesViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     

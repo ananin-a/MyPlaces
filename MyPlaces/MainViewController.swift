@@ -15,10 +15,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     private var places: Results<Place>!
     private var filteredPlaces: Results<Place>!
     private var ascendingSorting = true
+    
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false }
         return text.isEmpty
     }
+    
     private var isFiltering: Bool {
         return searchController.isActive && !searchBarIsEmpty
     }
@@ -26,10 +28,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet var tableView: UITableView!
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var reversedSortingButton: UIBarButtonItem!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         places = realm.objects(Place.self)
         
         //Setup the search controller
@@ -39,16 +41,16 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
-
+    
     // MARK: - Table view data source
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering {
             return filteredPlaces.count
         }
         return places.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         
@@ -80,9 +82,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         return [deleteAction]
     }
-
+    
     // MARK: - Navigation
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
@@ -101,7 +103,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         newPlaceVC.savePlace()
         tableView.reloadData()
     }
-
+    
     @IBAction func sortSelection(_ sender: UISegmentedControl) {
         
         sorting()

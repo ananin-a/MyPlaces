@@ -10,7 +10,7 @@ import UIKit
 import Cosmos
 
 class CustomTableViewCell: UITableViewCell {
-
+    
     @IBOutlet var imageOfPlace: UIImageView! {
         didSet {
             imageOfPlace.layer.cornerRadius = imageOfPlace.frame.size.height / 2
@@ -26,5 +26,5 @@ class CustomTableViewCell: UITableViewCell {
         }
     }
     
-
+    
 }
