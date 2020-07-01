@@ -205,7 +205,7 @@ extension NewPlacesViewController: UIImagePickerControllerDelegate, UINavigation
 
 extension NewPlacesViewController: MapViewControllerDelegate {
 
-    func getAddress(address: String?) {
+    func getAddress(_ address: String?) {
         placeLocation.text = address
     }
 }

@@ -461,7 +461,7 @@
                                 </constraints>
                                 <state key="normal" image="camcel"/>
                                 <connections>
-                                    <action selector="closeMap" destination="cYb-bV-0BK" eventType="touchUpInside" id="RxQ-sK-1Vi"/>
+                                    <action selector="closeVC" destination="cYb-bV-0BK" eventType="touchUpInside" id="Vgb-hC-Tc9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4P-aD-z3V">
@@ -470,9 +470,9 @@
                                     <constraint firstAttribute="width" constant="50" id="5EA-MH-4AN"/>
                                     <constraint firstAttribute="height" constant="50" id="xz0-ln-GN7"/>
                                 </constraints>
-                                <state key="normal" image="Location"/>
+                                <state key="normal" image="location"/>
                                 <connections>
-                                    <action selector="centerUserLocation" destination="cYb-bV-0BK" eventType="touchUpInside" id="vEV-2l-UZM"/>
+                                    <action selector="centerViewInUserLocation" destination="cYb-bV-0BK" eventType="touchUpInside" id="SuP-hL-abg"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pin" translatesAutoresizingMaskIntoConstraints="NO" id="4U0-ik-o0w">
@@ -498,15 +498,27 @@
                                     <action selector="doneButtonPressed" destination="cYb-bV-0BK" eventType="touchUpInside" id="xpp-iX-zIZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zB-pR-joA">
+                                <rect key="frame" x="188" y="774" width="38" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="goButtonPressed" destination="cYb-bV-0BK" eventType="touchUpInside" id="hgk-EV-2p6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="3NO-V2-cif" secondAttribute="bottom" id="2s7-9u-A68"/>
                             <constraint firstItem="4U0-ik-o0w" firstAttribute="centerX" secondItem="gLD-9n-Guh" secondAttribute="centerX" id="6eb-i1-16F"/>
+                            <constraint firstItem="JlK-8p-2yP" firstAttribute="bottom" secondItem="4zB-pR-joA" secondAttribute="bottom" constant="40" id="7DW-8e-FCf"/>
                             <constraint firstItem="3NO-V2-cif" firstAttribute="trailing" secondItem="JlK-8p-2yP" secondAttribute="trailing" id="9tF-Bx-amE"/>
                             <constraint firstItem="JlK-8p-2yP" firstAttribute="trailing" secondItem="e2f-cy-h38" secondAttribute="trailing" constant="20" id="Ebs-9g-i6N"/>
                             <constraint firstItem="4U0-ik-o0w" firstAttribute="centerY" secondItem="gLD-9n-Guh" secondAttribute="centerY" constant="-20" id="FhN-oW-TSy"/>
                             <constraint firstItem="e2f-cy-h38" firstAttribute="leading" secondItem="JlK-8p-2yP" secondAttribute="leading" constant="20" id="GGX-c6-XgP"/>
+                            <constraint firstItem="4zB-pR-joA" firstAttribute="centerX" secondItem="gLD-9n-Guh" secondAttribute="centerX" id="HH3-qJ-SE2"/>
                             <constraint firstItem="bvx-hH-9p9" firstAttribute="centerX" secondItem="gLD-9n-Guh" secondAttribute="centerX" id="JsX-Yb-Tmd"/>
                             <constraint firstItem="dcL-MK-Xq5" firstAttribute="top" secondItem="JlK-8p-2yP" secondAttribute="top" constant="46" id="P1P-qa-Cyx"/>
                             <constraint firstItem="JlK-8p-2yP" firstAttribute="bottom" secondItem="bvx-hH-9p9" secondAttribute="bottom" constant="40" id="QPK-gG-Uyo"/>
@@ -521,7 +533,8 @@
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="e2f-cy-h38" id="DUQ-To-fIX"/>
-                        <outlet property="doneButton" destination="bvx-hH-9p9" id="HDu-kn-2bq"/>
+                        <outlet property="doneButton" destination="bvx-hH-9p9" id="NNU-Vg-rtl"/>
+                        <outlet property="goButton" destination="4zB-pR-joA" id="X56-6b-H4C"/>
                         <outlet property="mapPinImage" destination="4U0-ik-o0w" id="hee-p0-yWE"/>
                         <outlet property="mapView" destination="3NO-V2-cif" id="zG4-NR-3GV"/>
                     </connections>
@@ -537,11 +550,11 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AZ" width="25" height="24"/>
-        <image name="Location" width="30" height="30"/>
         <image name="Photo" width="195" height="196"/>
         <image name="Pin" width="42" height="42"/>
         <image name="Placeholder" width="22" height="22"/>
         <image name="camcel" width="128" height="128"/>
+        <image name="location" width="30" height="30"/>
         <image name="map" width="50" height="50"/>
     </resources>
 </document>
