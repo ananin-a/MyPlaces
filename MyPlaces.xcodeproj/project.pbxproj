@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		377B0A268CDB1FCDAEBF651E /* Pods_MyPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4F50150E4EEC68ECBE7C47 /* Pods_MyPlaces.framework */; };
+		8A30672424ACF57B0055026D /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A30672324ACF57B0055026D /* MapManager.swift */; };
 		8A3444E8248FB781004F1788 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3444E7248FB781004F1788 /* CustomTableViewCell.swift */; };
 		8A527313249806E60092F09F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A527312249806E60092F09F /* StorageManager.swift */; };
 		8AB68B4F248FCEF80016CF4D /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB68B4E248FCEF80016CF4D /* PlaceModel.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A30672324ACF57B0055026D /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		8A3444E7248FB781004F1788 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		8A527312249806E60092F09F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		8AB68B4E248FCEF80016CF4D /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
@@ -78,12 +80,13 @@
 				8AC41788248EC0B100BC5940 /* MainViewController.swift */,
 				8AC58364249175C4007EBD9B /* NewPlacesViewController.swift */,
 				8AC80E36249DED11004BA9A0 /* MapViewController.swift */,
+				8A30672324ACF57B0055026D /* MapManager.swift */,
 				8AB68B4E248FCEF80016CF4D /* PlaceModel.swift */,
 				8A527312249806E60092F09F /* StorageManager.swift */,
 				8A3444E7248FB781004F1788 /* CustomTableViewCell.swift */,
 				8AC41778248EBC0A00BC5940 /* Main.storyboard */,
-				8AC4177B248EBC0C00BC5940 /* Assets.xcassets */,
 				8AC4177D248EBC0C00BC5940 /* LaunchScreen.storyboard */,
+				8AC4177B248EBC0C00BC5940 /* Assets.xcassets */,
 				8AC41780248EBC0C00BC5940 /* Info.plist */,
 			);
 			path = MyPlaces;
@@ -225,6 +228,7 @@
 				8AC41789248EC0B100BC5940 /* MainViewController.swift in Sources */,
 				8AC58365249175C4007EBD9B /* NewPlacesViewController.swift in Sources */,
 				8A527313249806E60092F09F /* StorageManager.swift in Sources */,
+				8A30672424ACF57B0055026D /* MapManager.swift in Sources */,
 				8AB68B4F248FCEF80016CF4D /* PlaceModel.swift in Sources */,
 				8A3444E8248FB781004F1788 /* CustomTableViewCell.swift in Sources */,
 				8AC41775248EBC0A00BC5940 /* SceneDelegate.swift in Sources */,
